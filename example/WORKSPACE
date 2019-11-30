@@ -1,0 +1,5 @@
+new_local_repository(
+    name = "system",
+    path = "/usr/local/include/",
+    build_file="BUILD.system"
+)

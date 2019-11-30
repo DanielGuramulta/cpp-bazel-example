@@ -1,0 +1,20 @@
+cc_library(
+    name = "gflags",
+    hdrs = glob(["gflags/*.h"]),
+    includes = ["."],
+    linkopts = [
+        "-L/usr/local/lib/ -lgflags",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "glog",
+    hdrs = glob(["glog/*.h"]),
+    includes = ["."],
+    linkopts = [
+        "-L/usr/local/lib/ -lglog",
+    ],
+    visibility = ["//visibility:public"],
+    deps = [":gflags"],
+)
